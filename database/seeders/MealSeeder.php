@@ -14,22 +14,31 @@ class MealSeeder extends Seeder
     public function run(): void
     {
         //
-         Meal::create([
-            'name' => 'كفتة',
-            'price' => 80,
-            'category_id' => 1
-        ]);
+         Meal::insert([
+            // بيتزا (category_id = 1)
+            ['name' => 'بيتزا مارجريتا', 'price' => 85, 'category_id' => 1],
+            ['name' => 'بيتزا بيبروني', 'price' => 100, 'category_id' =>1],
+            ['name' => 'بيتزا خضار', 'price' => 90, 'category_id' => 1],
 
-        Meal::create([
-            'name' => 'شيش طاووق',
-            'price' => 90,
-            'category_id' => 1
-        ]);
+            // باستا (category_id = 2)
+            ['name' => 'سباجيتي بولونيز', 'price' => 95, 'category_id' => 2],
+            ['name' => 'لازانيا', 'price' => 110, 'category_id' => 2],
+            ['name' => 'فيتوتشيني ألفريدو', 'price' => 105, 'category_id' => 2],
 
-        Meal::create([
-            'name' => 'أم علي',
-            'price' => 50,
-            'category_id' => 2
-        ]);
-    }
+            // سناكس (category_id = 3)
+            ['name' => 'بطاطس ويدجز', 'price' => 40, 'category_id' => 3],
+            ['name' => 'موتزاريلا ستكس', 'price' => 60, 'category_id' => 3],
+            ['name' => 'حلقات بصل', 'price' => 35, 'category_id' => 3],
+
+            // حلويات (category_id = 4)
+            ['name' => 'تيراميسو', 'price' => 75, 'category_id' => 4],
+            ['name' => 'كيك شوكولاتة', 'price' => 55, 'category_id' => 4],
+            ['name' => 'تشيز كيك', 'price' => 65, 'category_id' => 4],
+
+            // مشروبات (category_id = 5)
+            ['name' => 'بيبسي', 'price' => 20, 'category_id' => 5],
+            ['name' => 'عصير برتقال فريش', 'price' => 35, 'category_id' => 5],
+            ['name' => 'مياه معدنية', 'price' => 10, 'category_id' => 5],
+  ]);
+  }
 }
