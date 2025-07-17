@@ -14,7 +14,7 @@ Route::get('/user', function (Request $request) {
 
 Route::controller(CategoryController::class)->group(function(){
 Route::get('/categories', 'index');         // للحصول على كل الأقسام
-    Route::get('/categories/{id}/meals', 'meals'); // للحصول على الوجبات بقسم معين
+    Route::get('/categories/{id}/meals', 'mealsByCategory'); // للحصول على الوجبات بقسم معين
 });
 
 
