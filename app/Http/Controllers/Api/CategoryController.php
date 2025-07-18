@@ -31,7 +31,7 @@ class CategoryController extends Controller
            $category = Category::with('meals')->find($id);
         $meals = MealResource::collection($category->meals);
 
-        return $this->SuccessResponse(MealResource::collection($meals), 'تم جلب الاصناف بنجاح', 200);
+        return $this->SuccessResponse($meals, 'تم جلب الاصناف بنجاح', 200);
 
         // $category = Category::with('meals')->findOrFail($id);
 
