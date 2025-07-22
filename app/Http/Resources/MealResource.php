@@ -15,10 +15,11 @@ class MealResource extends JsonResource
     public function toArray(Request $request): array
     {
         return [
+            'category'=>$this->category->name,
             'id' => $this->id,
             'name' => $this->name,
             'price'=> $this->price,
-            'category'=>$this->category->name
+
             // 'category'=>new CategoryResource($this->whenLoaded('category'))
 
         ];

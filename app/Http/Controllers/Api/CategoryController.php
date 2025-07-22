@@ -28,29 +28,29 @@ class CategoryController extends Controller
     public function mealsByCategory($id)
     {
 
-        //    $category = Category::with('meals')->find($id);
-        // $meals = MealResource::collection($category);
+           $category = Category::with('meals')->find($id);
+        $meals = MealResource::collection($category);
 
-        // return $this->SuccessResponse($meals, 'تم جلب الاصناف بنجاح', 200);
+        return $this->SuccessResponse($meals, 'تم جلب الاصناف بنجاح', 200);
 
-        $category = Category::with('meals')->findOrFail($id);
+        // $category = Category::with('meals')->findOrFail($id);
 
-        $meals = $category->meals->map(
-            function ($meal){
-                return[
-                     'id' => $meal->id,
-            'name' => $meal->name,
-            'price' => $meal->price,
-                ];
-            }
-        );
+        // $meals = $category->meals->map(
+        //     function ($meal){
+        //         return[
+        //              'id' => $meal->id,
+        //     'name' => $meal->name,
+        //     'price' => $meal->price,
+        //         ];
+        //     }
+        // );
 
-        return response()->json([
-            'status' => true,
-            'message' => 'تم جلب الأصناف بنجاح',
-            'category' => $category->name,
-            'meals' => $meals,
-        ], 200);
+        // return response()->json([
+        //     'status' => true,
+        //     'message' => 'تم جلب الأصناف بنجاح',
+        //     'category' => $category->name,
+        //     'meals' => $meals,
+        // ], 200);
 
 
     }
