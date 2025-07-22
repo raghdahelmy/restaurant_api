@@ -18,7 +18,7 @@ class MealResource extends JsonResource
             'id' => $this->id,
             'name' => $this->name,
             'price'=> $this->price,
-            'category'=>$this->category->name,
+            'category'=>$this->category->name
             // 'category'=>new CategoryResource($this->whenLoaded('category'))
 
         ];
