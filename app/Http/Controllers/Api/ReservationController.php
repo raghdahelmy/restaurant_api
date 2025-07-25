@@ -1,5 +1,15 @@
 <?php
 
+namespace App\Http\Controllers\Api;
+
+use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+
+class ReservationController extends Controller
+{
+    //
+    <?php
+
 namespace App\Http\Controllers\APi;
 
 use App\Models\Reservation;
@@ -28,5 +38,7 @@ public function store(StoreReservationRequest $request)
 return $this->SuccessResponse(new ReservationResource($reservation), 'Reservation created successfully.', 201);
 }
 
+
+}
 
 }
