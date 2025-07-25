@@ -28,7 +28,7 @@ class StoreReservationRequest extends FormRequest
             'tables' => 'required|integer|min:1',
             'people' => 'required|integer|min:1',
             'date'   => 'required|date|after_or_equal:today',
-            'time' => 'required|date_format:h:i a',
+            'time' => 'required|date_format:H:i',
         ];
         //
 

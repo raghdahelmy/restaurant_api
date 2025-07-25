@@ -57,7 +57,6 @@ use App\Http\Controllers\Api\ContactController;
 use App\Http\Controllers\Api\CategoryController;
 use App\Http\Controllers\API\ReservationController;
 use App\Http\Controllers\Api\SubscriberController;
-use App\Models\Reservation;
 
 // Auth Routes
 Route::prefix('auth')->group(function () {
@@ -84,7 +83,7 @@ Route::controller(CategoryController::class)->group(function () {
 // Meals
 Route::get('/meals', [MealController::class, 'index']);
 
-// Subscriber + Contact
+// Subscriber + Contact + Reservation
 Route::post('/subscribe', [SubscriberController::class, 'store']);
 Route::post('/contact', [ContactController::class, 'store']);
-Route::Post('/My-reservation',[ReservationController::class,'store'])->middleware('auth:sanctum');
+Route::Post('/reservation',[ReservationController::class,'store'])->middleware('auth:sanctum');

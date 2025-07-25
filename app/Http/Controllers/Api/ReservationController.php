@@ -16,6 +16,7 @@ class ReservationController extends Controller
 
 public function store(StoreReservationRequest $request)
 {
+
     $data = $request->only(['name', 'phone', 'tables', 'people', 'date', 'time']);
 
     //    $reservation = Auth::user()->reservations()->create($data);
