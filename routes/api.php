@@ -1,12 +1,13 @@
 <?php
 
-// use Illuminate\Http\Request;
-// use Illuminate\Support\Facades\Route;
-// use App\Http\Controllers\Api\AuthController;
-// use App\Http\Controllers\Api\MealController;
-// use App\Http\Controllers\Api\ContactController;
-// use App\Http\Controllers\Api\CategoryController;
-// use App\Http\Controllers\Api\SubscriberController;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Api\AuthController;
+use App\Http\Controllers\Api\MealController;
+use App\Http\Controllers\Api\ContactController;
+use App\Http\Controllers\Api\CategoryController;
+use App\Http\Controllers\Api\SubscriberController;
+use App\Http\Controllers\Api\ReservationController;
 
 
 // Route::get('/user', function (Request $request) {
@@ -47,17 +48,6 @@
     //     });
     // });
 
-
-
-    use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Api\AuthController;
-use App\Http\Controllers\Api\MealController;
-use App\Http\Controllers\Api\ContactController;
-use App\Http\Controllers\TestRailwayController;
-use App\Http\Controllers\Api\CategoryController;
-use App\Http\Controllers\Api\SubscriberController;
-use App\Http\Controllers\API\ReservationController;
 
 // Auth Routes
 Route::prefix('auth')->group(function () {
