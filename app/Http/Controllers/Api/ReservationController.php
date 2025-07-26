@@ -13,7 +13,7 @@ use App\Http\Requests\StoreReservationRequest;
 class ReservationController extends Controller
 {
     //
-    use ApiResponse;
+        use ApiResponse;
 
 public function store(StoreReservationRequest $request)
 {
@@ -28,5 +28,6 @@ public function store(StoreReservationRequest $request)
 
 return $this->SuccessResponse(new ReservationResource($reservation), 'Reservation created successfully.', 201);
 }
+
 
 }

@@ -90,4 +90,3 @@ Route::post('/contact', [ContactController::class, 'store']);
 Route::Post('/reservation',[ReservationController::class,'store'])->middleware('auth:sanctum');
 
 
-Route::get('/ping', [TestRailwayController::class, 'ping']);
