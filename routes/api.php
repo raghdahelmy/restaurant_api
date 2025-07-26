@@ -54,9 +54,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\MealController;
 use App\Http\Controllers\Api\ContactController;
+use App\Http\Controllers\TestRailwayController;
 use App\Http\Controllers\Api\CategoryController;
-use App\Http\Controllers\API\ReservationController;
 use App\Http\Controllers\Api\SubscriberController;
+use App\Http\Controllers\API\ReservationController;
 
 // Auth Routes
 Route::prefix('auth')->group(function () {
@@ -87,3 +88,6 @@ Route::get('/meals', [MealController::class, 'index']);
 Route::post('/subscribe', [SubscriberController::class, 'store']);
 Route::post('/contact', [ContactController::class, 'store']);
 Route::Post('/reservation',[ReservationController::class,'store'])->middleware('auth:sanctum');
+
+
+Route::get('/ping', [TestRailwayController::class, 'ping']);
